@@ -9,7 +9,7 @@ body {
 /* ===== Header / Nav Bar ===== */
 .main-header {
   background: #1e293b;
-  height: 50px;               /* thinner bar */
+  height: 45px;               /* thinner bar */
   display: flex;
   align-items: center;
   position: sticky;
