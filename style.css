@@ -27,9 +27,18 @@ h1, h2, h3, p {
   z-index: 1000;
 }
 
+/* Logo container */
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* SVG logo */
 .logo img {
-  height: 40px;
+  height: 40px;   /* adjust this number to match your header */
   width: auto;
+  display: block;
 }
 
 .nav-links {
