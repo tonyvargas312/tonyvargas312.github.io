@@ -9,37 +9,40 @@ body {
 /* Header */
 .main-header {
   background: #1e293b;
-  padding: 0 40px;          /* no vertical padding */
+  padding: 0;                     /* remove all padding */
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-  height: 60px;             /* fixed header height */
+  height: 60px;
   display: flex;
   align-items: center;
 }
 
+/* Container for logo + nav */
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: auto;
+  width: 100%;
+  padding-right: 40px;            /* spacing only on the right side */
 }
 
-/* Logo container matches header height */
+/* Logo section */
 .logo {
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-/* Logo image fills container */
+/* Logo image */
 .logo img {
-  height: 100%;
+  max-height: 100%;
   width: auto;
-  object-fit: contain;
+  display: block;
 }
 
 .nav-links {
