@@ -8,13 +8,16 @@ body {
 
 /* ===== Header / Nav Bar ===== */
 .main-header {
-  background: #1e293b;   /* dark gray-blue, different from body */
-  padding: 15px 40px;
+  background: #1e293b;
+  padding: 0 40px;          /* remove vertical padding, keep left/right */
   position: sticky;
   top: 0;
-  width: 100%;           /* full width across screen */
+  width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.4); /* subtle shadow */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  height: 60px;             /* control header thickness */
+  display: flex;
+  align-items: center;      /* vertically center logo & nav */
 }
 
 
@@ -26,8 +29,9 @@ body {
   margin: auto;
 }
 
+/* Make logo fill header height */
 .logo img {
-  height: 50px;  /* Adjust for your logo size */
+  height: 100%;
   width: auto;
 }
 
