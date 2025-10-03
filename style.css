@@ -6,31 +6,41 @@ body {
   color: #e5e7eb;       /* light gray text */
 }
 
-/* ===== Nav Bar ===== */
-nav {
+/* ===== Header / Nav Bar ===== */
+.main-header {
   background: #0f172a;
   padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.logo {
-  color: #22d3ee; /* teal accent */
+.logo img {
+  height: 50px;  /* Adjust for your logo size */
+  width: auto;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px; /* more spacing */
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #e5e7eb;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -42,7 +52,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 40px;
+  padding: 100px 40px;
+  background: #0f172a;
 }
 
 .hero-container {
