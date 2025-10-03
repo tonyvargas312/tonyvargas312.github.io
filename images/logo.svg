@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <rect width="500" height="500" fill="none"/> <!-- transparent background -->
+
+  <!-- Capital T (white, behind, nudged right to 248) -->
+  <text x="249" y="320" text-anchor="middle" font-size="260" font-family="Arial, sans-serif" fill="#e5e7eb" font-weight="700">
+    T
+  </text>
+
+  <!-- Capital V (gray, in front) -->
+  <text x="250" y="320" text-anchor="middle" font-size="260" font-family="Arial, sans-serif" fill="#9ca3af" font-weight="700">
+    V
+  </text>
+</svg>

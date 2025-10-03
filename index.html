@@ -5,46 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tony Vargas | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- ===== HEADER / NAVBAR ===== -->
+  <!-- ===== HEADER ===== -->
 <header class="main-header">
   <div class="logo">
-    <img src="images/logo.png" alt="Tony Vargas Logo">
-    <!-- Dropdown menu -->
-    <ul class="dropdown-menu">
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <img src="images/logo.svg" alt="Tony Vargas Logo">
   </div>
+  <nav class="nav-links">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+    <a href="#book" class="btn-pill">Book a Call</a>
+  </nav>
 </header>
 
   <!-- ===== HERO SECTION ===== -->
   <section class="hero">
-    <div class="hero-container">
-      <!-- Left side text -->
-      <div class="hero-text">
-        <h1>Hi, I'm Tony!</h1>
-        <h2><span class="highlight">Full-Stack Developer</span> & Cybersecurity Enthusiast</h2>
-        <p>
-          I’m a Computer Engineering student at ULACIT, Costa Rica. Skilled in Java, Python, and C#, 
-          with a passion for Game Development and Cybersecurity. Creative, adaptable, and eager to 
-          work on innovative projects with international teams.
-        </p>
-        <div class="hero-buttons">
-          <a href="cv.pdf" class="btn">Download CV</a>
-          <a href="#projects" class="btn-outline">View Projects</a>
-        </div>
-      </div>
-
-      <!-- Right side image -->
-      <div class="hero-image">
-        <img src="images/profile.jpg" alt="Tony Vargas" class="profile-hero">
+    <div class="hero-content">
+      <p class="tag">🚀 Next Venture is live!</p>
+      <h1>
+        I help teams turn ideas<br>
+        into seamless <span class="highlight">digital experiences</span>
+      </h1>
+      <p class="subtitle">
+        Hi, I'm <span class="highlight">Tony Vargas</span>, a Full-Stack Developer & Cybersecurity Enthusiast
+      </p>
+      <div class="hero-buttons">
+        <a href="cv.pdf" class="btn-pill primary">Download CV</a>
+        <a href="#projects" class="btn-pill secondary">View Projects</a>
       </div>
     </div>
   </section>
-
 </body>
 </html>
