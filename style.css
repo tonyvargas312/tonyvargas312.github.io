@@ -6,20 +6,19 @@ body {
   color: #e5e7eb;       /* light gray text */
 }
 
-/* ===== Header / Nav Bar ===== */
+/* Header */
 .main-header {
   background: #1e293b;
-  padding: 0 40px;          /* remove vertical padding, keep left/right */
+  padding: 0 40px;          /* no vertical padding */
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-  height: 60px;             /* control header thickness */
+  height: 60px;             /* fixed header height */
   display: flex;
-  align-items: center;      /* vertically center logo & nav */
+  align-items: center;
 }
-
 
 .nav-container {
   display: flex;
@@ -29,10 +28,18 @@ body {
   margin: auto;
 }
 
-/* Make logo fill header height */
+/* Logo container matches header height */
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Logo image fills container */
 .logo img {
   height: 100%;
   width: auto;
+  object-fit: contain;
 }
 
 .nav-links {
