@@ -2,7 +2,6 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at top, #1a1a2e, #0f172a 70%);
   color: #e5e7eb;
   min-height: 100vh;
   overflow-x: hidden;
@@ -12,17 +11,17 @@ h1, h2, h3, p {
   margin: 0;
 }
 
-/* ===== Topbar (just logo + nav, fixed at top) ===== */
+/* ===== Topbar ===== */
 .topbar {
   position: fixed;
   top: 0;
   width: 100%;
   height: 70px;
   display: flex;
-  justify-content: space-between; /* logo left, nav center, placeholder right */
+  justify-content: space-between;
   align-items: center;
   padding: 0 30px;
-  background: transparent; /* no bar */
+  background: transparent; /* no bar, just floating */
   z-index: 1000;
 }
 
@@ -63,6 +62,7 @@ h1, h2, h3, p {
   padding: 8px 16px;
   border-radius: 999px;
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .nav-links a:hover,
@@ -70,15 +70,11 @@ h1, h2, h3, p {
   background: rgba(255, 255, 255, 0.15);
 }
 
-.nav-links a.active {
-  background: rgba(255, 255, 255, 0.15);
-  position: relative;
-}
-
+/* White tab above active link */
 .nav-links a.active::before {
   content: "";
   position: absolute;
-  top: -10px; /* sits above pill */
+  top: -10px;
   left: 50%;
   transform: translateX(-50%);
   width: 30px;
@@ -87,7 +83,7 @@ h1, h2, h3, p {
   border-radius: 3px;
 }
 
-/* Special button */
+/* Book a Call special button */
 .nav-links .btn-pill {
   background: #22d3ee;
   color: #0f172a !important;
@@ -98,9 +94,9 @@ h1, h2, h3, p {
   background: #0ea5e9;
 }
 
-/* Right side placeholder */
+/* Right side placeholder for balance */
 .topbar-right {
-  width: 45px; /* balances layout */
+  width: 45px;
 }
 
 /* ===== Hero Section ===== */
@@ -112,6 +108,7 @@ h1, h2, h3, p {
   text-align: center;
   position: relative;
   padding: 0 20px;
+  z-index: 1; /* keep above stars */
 }
 
 .hero-content {
@@ -174,13 +171,13 @@ h1, h2, h3, p {
   color: #0f172a;
 }
 
-/* ===== Stars Background ===== */
-body::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: url("https://www.transparenttextures.com/patterns/stardust.png");
-  opacity: 0.2;
+/* ===== Starfield Canvas ===== */
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -1;
+  background: radial-gradient(circle at top, #1a1a2e, #0f172a 70%);
 }
