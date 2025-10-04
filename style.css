@@ -27,7 +27,7 @@ h1, h2, h3, p {
 
 /* Logo */
 .logo img {
-  height: 45px;
+  height: 60px;
   width: auto;
   display: block;
 }
@@ -152,15 +152,20 @@ h1, h2, h3, p {
 }
 
 .hero-buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   font-weight: 500;
-  padding: 10px 20px;
+  padding: 12px 28px;
   border-radius: 999px;
   transition: all 0.3s ease;
   backdrop-filter: blur(12px);
   background: rgba(255, 255, 255, 0.05);
   color: #fff;
+  line-height: 1;
 }
+
 
 .hero-buttons a:hover {
   background: rgba(255, 255, 255, 0.15);
