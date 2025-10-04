@@ -32,7 +32,7 @@ canvas#stars {
   width: auto;
 }
 
-/* ===== Minimal Floating Nav ===== */
+/* ===== Minimal Floating Nav (with your color palette) ===== */
 .topbar {
   position: fixed;
   top: 20px;
@@ -55,12 +55,17 @@ canvas#stars {
   display: flex;
   gap: 22px;
   margin: 0;
-  padding: 6px 20px;
-  background: rgba(35, 60, 75, 0.65);
+  padding: 6px 20px; /* smaller pill height */
+  background: rgba(35, 60, 75, 0.65); /* translucent Blue Dianne */
   backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 999px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
 }
 
 .nav-links a {
@@ -82,17 +87,18 @@ canvas#stars {
   background: rgba(255, 255, 255, 0.12);
 }
 
+/* Small orange tab above the active item */
 .nav-links a.active::before {
   content: "";
   position: absolute;
-  top: -14px;
+  top: -14px;              /* move it above the navbar */
   left: 50%;
   transform: translateX(-50%);
   width: 32px;
   height: 6px;
-  background: #FF7D2D;
+  background: #FF7D2D;     /* Crusta orange */
   border-radius: 3px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); /* subtle floating shadow */
 }
 
 /* ===== Book a Call Button ===== */
@@ -107,9 +113,10 @@ canvas#stars {
 }
 
 .nav-links .btn-pill:hover {
-  background: #FAC846;
+  background: #FAC846; /* Bright Sun hover */
   transform: translateY(-1px);
 }
+
 
 /* ===== HERO SECTIONS ===== */
 .hero {
