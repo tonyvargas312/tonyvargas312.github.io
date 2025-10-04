@@ -151,22 +151,40 @@ h1, h2, h3, p {
   margin-top: 20px;
 }
 
-.btn-pill.primary {
-  background: #22d3ee;
-  color: #0f172a;
+.hero-buttons a {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
 }
 
-.btn-pill.primary:hover {
+.hero-buttons a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Primary button */
+.hero-buttons .primary {
+  background: #22d3ee;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.hero-buttons .primary:hover {
   background: #0ea5e9;
 }
 
-.btn-pill.secondary {
+/* Secondary button */
+.hero-buttons .secondary {
   border: 2px solid #22d3ee;
-  color: #22d3ee;
   background: transparent;
+  color: #22d3ee;
 }
 
-.btn-pill.secondary:hover {
+.hero-buttons .secondary:hover {
   background: #22d3ee;
   color: #0f172a;
 }
