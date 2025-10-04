@@ -19,7 +19,20 @@ canvas#stars {
   z-index: -1;
 }
 
-/* ===== Minimal Floating Nav (with your color palette) ===== */
+/* ===== Standalone Logo ===== */
+.logo-standalone {
+  position: fixed;
+  top: 0px;
+  left: 30px;
+  z-index: 1100;
+}
+
+.logo-standalone img {
+  height: 90px;
+  width: auto;
+}
+
+/* ===== Minimal Floating Nav ===== */
 .topbar {
   position: fixed;
   top: 20px;
@@ -42,17 +55,12 @@ canvas#stars {
   display: flex;
   gap: 22px;
   margin: 0;
-  padding: 6px 20px; /* smaller pill height */
-  background: rgba(35, 60, 75, 0.65); /* translucent Blue Dianne */
+  padding: 6px 20px;
+  background: rgba(35, 60, 75, 0.65);
   backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 999px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
-}
-
-.nav-links li {
-  display: flex;
-  align-items: center;
 }
 
 .nav-links a {
@@ -77,14 +85,14 @@ canvas#stars {
 .nav-links a.active::before {
   content: "";
   position: absolute;
-  top: -14px;              /* move it above the navbar */
+  top: -14px;
   left: 50%;
   transform: translateX(-50%);
   width: 32px;
   height: 6px;
-  background: #FF7D2D;     /* Crusta orange */
+  background: #FF7D2D;
   border-radius: 3px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); /* subtle floating shadow */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 /* ===== Book a Call Button ===== */
@@ -99,10 +107,9 @@ canvas#stars {
 }
 
 .nav-links .btn-pill:hover {
-  background: #FAC846; /* Bright Sun hover */
+  background: #FAC846;
   transform: translateY(-1px);
 }
-
 
 /* ===== HERO SECTIONS ===== */
 .hero {
@@ -126,7 +133,7 @@ canvas#stars {
 }
 
 .hero .highlight {
-  color: #FF7D2D; /* Crusta */
+  color: #FF7D2D;
   font-style: italic;
 }
 
@@ -217,6 +224,75 @@ canvas#stars {
   font-size: 1rem;
 }
 
+/* ===== FOOTER ===== */
+.footer {
+  padding: 80px 40px 40px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #e5e7eb;
+  backdrop-filter: blur(10px);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-links div {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links h4 {
+  color: #FF7D2D;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: #FAE846;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #b8c1cc;
+}
+
+.footer-bottom a {
+  color: #FF7D2D;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-bottom a:hover {
+  color: #FAE846;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .hero h1 {
@@ -234,5 +310,11 @@ canvas#stars {
 
   .grid-container {
     gap: 25px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
   }
 }

@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tony Vargas | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <!-- STARFIELD BACKGROUND -->
+  <!-- Animated Background -->
   <canvas id="stars"></canvas>
+
+  <!-- ===== Standalone Logo ===== -->
+  <div class="logo-standalone">
+    <img src="images/logo.svg" alt="Tony Vargas Logo">
+  </div>
 
   <!-- ===== TOPBAR ===== -->
   <div class="topbar">
-    <div class="logo">
-      <img src="images/logo.svg" alt="Tony Vargas Logo">
-    </div>
-
     <nav class="nav-container">
       <ul class="nav-links">
         <li><a href="#home" class="active">Home</a></li>
@@ -27,8 +29,6 @@
         <li><a href="#book" class="btn-pill">Book a Call</a></li>
       </ul>
     </nav>
-
-    <div class="topbar-right"></div>
   </div>
 
   <!-- ===== HERO SECTION (TOP) ===== -->
@@ -85,7 +85,7 @@
     </div>
   </section>
 
-  <!-- ===== SECOND HERO (BOTTOM) ===== -->
+  <!-- ===== HERO SECTION (BOTTOM) ===== -->
   <section id="bottom-hero" class="hero bottom-hero">
     <div class="hero-content">
       <h1>
@@ -101,6 +101,44 @@
       </div>
     </div>
   </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="images/logo.svg" alt="Tony Vargas Logo" class="footer-logo" />
+        <p>
+          I'm Tony — a full-stack developer, cybersecurity enthusiast, and problem solver.
+          Thanks for visiting my site!
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h4>General</h4>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#blog">Blog</a>
+        </div>
+
+        <div>
+          <h4>Specifics</h4>
+          <a href="#contact">Contact</a>
+          <a href="#book">Book a Call</a>
+          <a href="#uses">Uses</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Tony Vargas. All rights reserved.</p>
+      <p>
+        <a href="#">Privacy Policy</a> •
+        <a href="#">Terms & Conditions</a>
+      </p>
+    </div>
+  </footer>
 
   <!-- ===== NAV SCRIPT ===== -->
   <script>
@@ -125,7 +163,7 @@
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    let stars = Array.from({length: 150}, () => ({
+    let stars = Array.from({ length: 150 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       radius: Math.random() * 1.5,
@@ -147,7 +185,6 @@
       });
       requestAnimationFrame(animateStars);
     }
-
     animateStars();
   </script>
 </body>
