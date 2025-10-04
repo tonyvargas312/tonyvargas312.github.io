@@ -88,13 +88,14 @@ body {
 .nav-links a.active::before {
   content: "";
   position: absolute;
-  top: -9px;
+  top: -14px;              /* move it above the navbar */
   left: 50%;
   transform: translateX(-50%);
-  width: 28px;
-  height: 5px;
-  background: #FF7D2D; /* Crusta */
+  width: 32px;
+  height: 6px;
+  background: #FF7D2D;     /* Crusta orange */
   border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); /* subtle floating shadow */
 }
 
 /* ===== Book a Call Button ===== */
