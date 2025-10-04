@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tony Vargas | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
 
-  <!-- Standalone Logo -->
+<body>
+  <!-- ===== LOGO ===== -->
   <div class="logo-standalone">
     <img src="images/logo.svg" alt="Tony Vargas Logo">
   </div>
 
-  <!-- Topbar with only nav -->
+  <!-- ===== NAVBAR ===== -->
   <div class="topbar">
     <nav class="nav-container">
       <ul class="nav-links">
@@ -26,18 +27,17 @@
         <li><a href="#book" class="btn-pill">Book a Call</a></li>
       </ul>
     </nav>
-    <div class="topbar-right"></div>
   </div>
 
-  <!-- Hero -->
-  <section class="hero">
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero">
     <div class="hero-content">
       <h1>
         I help teams turn ideas<br>
         into seamless <span class="highlight">digital experiences</span>
       </h1>
       <p class="subtitle">
-        Hi, I'm <span class="highlight">Tony Vargas</span>, a Full-Stack Developer & Cybersecurity Enthusiast
+        Hi, I'm <span class="highlight">Tony Vargas</span> — a Full-Stack Developer & Cybersecurity Enthusiast.
       </p>
       <div class="hero-buttons">
         <a href="cv.pdf" class="btn-pill primary">Download CV</a>
@@ -46,7 +46,62 @@
     </div>
   </section>
 
-  <!-- Nav Active Script -->
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="about">
+    <h2>Collaboration</h2>
+    <p>I prioritize client collaboration, fostering open communication and teamwork to create impactful digital solutions that drive results.</p>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="images/logo.svg" alt="Tony Vargas Logo" class="footer-logo">
+        <p>I'm Tony Vargas — a full-stack developer, cybersecurity enthusiast & problem solver. Thanks for visiting my site!</p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h4>General</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Specifics</h4>
+          <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#uses">Uses</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>More</h4>
+          <ul>
+            <li><a href="#book">Book a Call</a></li>
+            <li><a href="#links">Links</a></li>
+            <li><a href="#rss">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Tony Vargas. All rights reserved</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== NAV SCRIPT ===== -->
   <script>
     const navLinks = document.querySelectorAll('.nav-links a');
     navLinks.forEach(link => {
@@ -57,7 +112,7 @@
     });
   </script>
 
-  <!-- Starfield Background -->
+  <!-- ===== STARFIELD BACKGROUND ===== -->
   <canvas id="stars"></canvas>
   <script>
     const canvas = document.getElementById("stars");
@@ -70,7 +125,7 @@
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    let stars = Array.from({length: 150}, () => ({
+    let stars = Array.from({ length: 150 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       radius: Math.random() * 1.5,
@@ -81,23 +136,19 @@
 
     function animateStars() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       stars.forEach(star => {
         star.opacity += star.fade;
         if (star.opacity <= 0 || star.opacity >= 1) star.fade *= -1;
-
-        ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
+        ctx.fillStyle = `rgba(250, 200, 70, ${star.opacity})`; // Bright Sun glow
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
         ctx.fill();
-
         star.y += star.speed;
         if (star.y > canvas.height) {
           star.y = 0;
           star.x = Math.random() * canvas.width;
         }
       });
-
       requestAnimationFrame(animateStars);
     }
     animateStars();
