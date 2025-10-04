@@ -70,6 +70,23 @@ h1, h2, h3, p {
   background: rgba(255, 255, 255, 0.15);
 }
 
+.nav-links a.active {
+  background: rgba(255, 255, 255, 0.15);
+  position: relative;
+}
+
+.nav-links a.active::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* sits above pill */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 6px;
+  background: white;
+  border-radius: 3px;
+}
+
 /* Special button */
 .nav-links .btn-pill {
   background: #22d3ee;

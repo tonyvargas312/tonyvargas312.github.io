@@ -9,14 +9,12 @@
 </head>
 <body>
 
-  <!-- ===== TOP FIXED BAR CONTENT (no header) ===== -->
+  <!-- ===== TOP FIXED BAR ===== -->
   <div class="topbar">
-    <!-- Logo (left) -->
     <div class="logo">
       <img src="images/logo.svg" alt="Tony Vargas Logo">
     </div>
 
-    <!-- Nav pill (center) -->
     <nav class="nav-container">
       <ul class="nav-links">
         <li><a href="#home" class="active">Home</a></li>
@@ -28,7 +26,6 @@
       </ul>
     </nav>
 
-    <!-- Empty placeholder for balance (right side) -->
     <div class="topbar-right"></div>
   </div>
 
@@ -50,5 +47,19 @@
     </div>
   </section>
 
+  <!-- ===== NAV SCRIPT ===== -->
+  <script>
+    // Select all nav links
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Remove "active" from all links
+        navLinks.forEach(l => l.classList.remove('active'));
+        // Add "active" to clicked link
+        link.classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
