@@ -1,4 +1,4 @@
-/* ===== Global Reset & Background ===== */
+/* ===== Global Reset ===== */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -11,6 +11,19 @@ h1, h2, h3, p {
   margin: 0;
 }
 
+/* ===== Standalone Logo ===== */
+.logo-standalone {
+  position: fixed;
+  top: 10px;
+  left: 30px;
+  z-index: 1100;
+}
+
+.logo-standalone img {
+  height: 120px;  /* adjust size as needed */
+  width: auto;
+}
+
 /* ===== Topbar ===== */
 .topbar {
   position: fixed;
@@ -18,23 +31,14 @@ h1, h2, h3, p {
   width: 100%;
   height: 70px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 0 30px;
-  background: transparent; /* no bar, just floating */
+  background: transparent;
   z-index: 1000;
-}
-
-/* Logo */
-.logo img {
-  height: 150px;
-  width: auto;
-  display: block;
 }
 
 /* Nav centered */
 .nav-container {
-  flex: 1;
   display: flex;
   justify-content: center;
 }
@@ -44,11 +48,10 @@ h1, h2, h3, p {
   display: flex;
   gap: 20px;
   margin: 0;
-  padding: 0;
+  padding: 8px 20px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12px);
   border-radius: 999px;
-  padding: 8px 20px;
 }
 
 .nav-links li {
@@ -70,7 +73,6 @@ h1, h2, h3, p {
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* White tab above active link */
 .nav-links a.active::before {
   content: "";
   position: absolute;
@@ -83,7 +85,7 @@ h1, h2, h3, p {
   border-radius: 3px;
 }
 
-/* Book a Call special button */
+/* Special Button */
 .nav-links .btn-pill {
   background: #22d3ee;
   color: #0f172a !important;
@@ -92,11 +94,6 @@ h1, h2, h3, p {
 
 .nav-links .btn-pill:hover {
   background: #0ea5e9;
-}
-
-/* Right side placeholder for balance */
-.topbar-right {
-  width: 45px;
 }
 
 /* ===== Hero Section ===== */
@@ -108,21 +105,11 @@ h1, h2, h3, p {
   text-align: center;
   position: relative;
   padding: 0 20px;
-  z-index: 1; /* keep above stars */
+  z-index: 1;
 }
 
 .hero-content {
   max-width: 800px;
-}
-
-.tag {
-  display: inline-block;
-  background: #1e293b;
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  margin-bottom: 20px;
-  color: #22d3ee;
 }
 
 .hero h1 {
@@ -155,23 +142,21 @@ h1, h2, h3, p {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  font-weight: 500;
   padding: 12px 28px;
   border-radius: 999px;
   transition: all 0.3s ease;
   backdrop-filter: blur(12px);
   background: rgba(255, 255, 255, 0.05);
   color: #fff;
+  font-weight: 500;
+  text-decoration: none;
   line-height: 1;
 }
-
 
 .hero-buttons a:hover {
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* Primary button */
 .hero-buttons .primary {
   background: #22d3ee;
   color: #0f172a;
@@ -182,7 +167,6 @@ h1, h2, h3, p {
   background: #0ea5e9;
 }
 
-/* Secondary button */
 .hero-buttons .secondary {
   border: 2px solid #22d3ee;
   background: transparent;
@@ -194,7 +178,7 @@ h1, h2, h3, p {
   color: #0f172a;
 }
 
-/* ===== Starfield Canvas ===== */
+/* ===== Starfield ===== */
 #stars {
   position: fixed;
   top: 0;
