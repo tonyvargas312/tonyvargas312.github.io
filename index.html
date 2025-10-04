@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tony Vargas | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
   <!-- ===== LOGO ===== -->
   <div class="logo-standalone">
-    <img src="images/logo.svg" alt="Tony Vargas Logo">
+    <img src="images/logo.svg" alt="Tony Vargas Logo" />
   </div>
 
   <!-- ===== NAVBAR ===== -->
@@ -33,7 +33,7 @@
   <section id="home" class="hero">
     <div class="hero-content">
       <h1>
-        I help teams turn ideas<br>
+        I help teams turn ideas<br />
         into seamless <span class="highlight">digital experiences</span>
       </h1>
       <p class="subtitle">
@@ -52,11 +52,55 @@
     <p>I prioritize client collaboration, fostering open communication and teamwork to create impactful digital solutions that drive results.</p>
   </section>
 
+  <!-- ===== SECOND HERO SECTION ===== -->
+  <section id="second-hero" class="second-hero">
+    <h2>From Concept to <span class="highlight">Creation</span></h2>
+    <p>Let’s bring your ideas to life through design, development, and innovation.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-pill primary">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- ===== GRID SECTION ===== -->
+  <section id="grid-section" class="grid-section">
+    <div class="grid-container">
+      <div class="grid-card">
+        <h3>Collaboration</h3>
+        <p>Fostering open communication and teamwork to achieve exceptional results.</p>
+      </div>
+
+      <div class="grid-card">
+        <h3>Innovation</h3>
+        <p>Always exploring new technologies to build efficient and modern solutions.</p>
+      </div>
+
+      <div class="grid-card">
+        <h3>Performance</h3>
+        <p>Optimizing systems and experiences to ensure speed and reliability.</p>
+      </div>
+
+      <div class="grid-card">
+        <h3>Security</h3>
+        <p>Embedding best cybersecurity practices into every layer of development.</p>
+      </div>
+
+      <div class="grid-card">
+        <h3>Design</h3>
+        <p>Creating visually engaging, user-centered interfaces that inspire trust.</p>
+      </div>
+
+      <div class="grid-card">
+        <h3>Growth</h3>
+        <p>Turning creative ideas into scalable, sustainable results for clients.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-left">
-        <img src="images/logo.svg" alt="Tony Vargas Logo" class="footer-logo">
+        <img src="images/logo.svg" alt="Tony Vargas Logo" class="footer-logo" />
         <p>I'm Tony Vargas — a full-stack developer, cybersecurity enthusiast & problem solver. Thanks for visiting my site!</p>
       </div>
 
@@ -101,30 +145,18 @@
     </div>
   </footer>
 
-  <!-- ===== NAV SCRIPT ===== -->
-  <script>
-    const navLinks = document.querySelectorAll('.nav-links a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-      });
-    });
-  </script>
-
-  <!-- ===== STARFIELD BACKGROUND ===== -->
+  <!-- ===== STARFIELD CANVAS ===== -->
   <canvas id="stars"></canvas>
+
   <script>
     const canvas = document.getElementById("stars");
     const ctx = canvas.getContext("2d");
-
     function resizeCanvas() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
-
     let stars = Array.from({ length: 150 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
@@ -133,13 +165,12 @@
       opacity: Math.random(),
       fade: Math.random() * 0.02 + 0.005
     }));
-
     function animateStars() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       stars.forEach(star => {
         star.opacity += star.fade;
         if (star.opacity <= 0 || star.opacity >= 1) star.fade *= -1;
-        ctx.fillStyle = `rgba(250, 200, 70, ${star.opacity})`; // Bright Sun glow
+        ctx.fillStyle = `rgba(250, 200, 70, ${star.opacity})`; // Bright Sun
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
         ctx.fill();
